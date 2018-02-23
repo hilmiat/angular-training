@@ -1,10 +1,17 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar color="primary" class="my-toolbar">
+  <mat-toolbar-row>
+    <span class="tengah">{{ title }}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <p>Hello {{ myObj.nama }}</p>
-  <app-datasiswa></app-datasiswa>
-  
+  <button mat-raised-button color="primary">Primary</button>
+  <nav>
+    <a routerLink="/home">Home</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/contact">Contact</a>
+  </nav>
 </div>
 
+<router-outlet></router-outlet>

@@ -1,0 +1,16 @@
+<div>
+  <mat-table [dataSource]="dataSource">
+    <!--buat kolom No-->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef>No.</mat-header-cell>
+      <mat-cell *matCellDef="let rs">{{rs.id}}</mat-cell>
+    </ng-container>
+    <!--buat kolom Nama-->
+    <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+        <mat-cell *matCellDef="let rs">{{rs.title}}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row;columns:displayedColumns;"></mat-row>
+  </mat-table>
+</div>
